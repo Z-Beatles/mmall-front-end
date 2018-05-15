@@ -8,10 +8,11 @@ var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 console.log(WEBPACK_ENV);
 
 // 用于生成HtmlWebpackPlugin的参数
-var getHtmlConfig = function(name) {
+var getHtmlConfig = function (name, title) {
     return {
         template: './src/view/' + name + '.html',
         filename: 'view/' + name + '.html',
+        title: title,
         inject: true,
         hash: true,
         chunks: ['common', name]
@@ -23,7 +24,8 @@ var config = {
     entry: {
         'common': ['./src/page/common/index.js', 'webpack-dev-server/client?http://localhost:8088/'],
         'index': './src/page/index/index.js',
-        'login': './src/page/login/index.js'
+        'login': './src/page/login/index.js',
+        'result': './src/page/result/index.js',
     },
     output: {
         filename: 'js/[name].js',
@@ -34,7 +36,8 @@ var config = {
         'jquery': 'window.jQuery'
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 // 处理css的loader
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
@@ -46,6 +49,11 @@ var config = {
                 // 处理图片和字体的loader
                 test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
                 use: 'url-loader?limit=100&name=/resource/[name].[ext]'
+            },
+            {
+                // 处理.string模板的loader
+                test: /\.string$/,
+                use: 'html-loader'
             }
         ]
     },
@@ -79,8 +87,9 @@ var config = {
         // 把css单独打包到文件里
         new ExtractTextPlugin('css/[name].css'),
         // html模板的处理
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login'))
+        new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     ]
 };
 
