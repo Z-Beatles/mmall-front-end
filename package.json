@@ -1,7 +1,7 @@
 {
   "name": "mmall-front-end",
   "version": "1.0.0",
-  "description": "mmall前端代码",
+  "description": "Mmall前端代码",
   "repository": {
     "type": "git",
     "url": "git@github.com:Z-Beatles/mmall-front-end.git"
@@ -25,6 +25,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "font-awesome": "^4.7.0",
+    "hogan": "^1.0.2"
   }
 }

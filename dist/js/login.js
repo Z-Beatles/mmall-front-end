@@ -1,1 +1,1 @@
-webpackJsonp([0],{29:function(o,n,e){var l=e(30);e(2),l("body").html("HELLO LOGIN for jquery"),console.log("hello login")},30:function(o,n){o.exports=window.jQuery}},[29]);
+webpackJsonp([1],{35:function(o,n,e){var l=e(36),r=e(2);l("body").html("HELLO LOGIN for jquery"),console.log("hello login"),r.goHome()},36:function(o,n){o.exports=window.jQuery}},[35]);
