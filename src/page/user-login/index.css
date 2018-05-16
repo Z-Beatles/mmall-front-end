@@ -1,0 +1,108 @@
+.page-wrap {
+    width: 100%;
+    padding: 40px 0;
+    background: #e72955;
+}
+
+/* 表单框 */
+.register-con {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    background: #ffffff;
+}
+
+/* 标题 */
+.register-con .register-title {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: 700;
+    color: #666666;
+}
+
+/* 注册参数框 */
+.register-con .register-box {
+    padding: 25px 20px 15px 20px;
+}
+
+/* 错误提示框 */
+.register-con .error-item {
+    display: none;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 4px 0 4px 40px;
+    border: 1px solid red;
+    color: red;
+    background: #fde9e9;
+}
+
+.register-con .error-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    font-size: 14px;
+    margin-top: -7px;
+}
+
+.register-con .register-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.register-con .register-label {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 38px;
+    line-height: 38px;
+    background: #f3f3f3;
+    font-size: 18px;
+    color: #d3d3d3;
+    text-align: center;
+    border-right: 1px solid #bdbdbd;
+}
+
+.register-con .register-input {
+    padding: 10px 0 10px 50px;
+    width: 308px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    border: 1px solid #bdbdbd;
+    outline: none;
+}
+
+.register-con .btn-login {
+    width: 100%;
+    padding: 3px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.register-con .link-item {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.register-con .link {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

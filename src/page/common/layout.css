@@ -108,6 +108,14 @@ input[type='checkbox'] {
     text-decoration: none;
 }
 
+/* 无法选中 */
+.un-select {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* btn */
 .btn {
     display: inline-block;
@@ -125,11 +133,19 @@ input[type='checkbox'] {
     text-decoration: none;
 }
 
+.btn:hover, .btn:focus {
+    opacity: 0.8;
+}
+
 .btn-mini {
     height: 25px;
     line-height: 25px;
     font-size: 12px;
     padding: 0 10px;
+}
+
+.btn-mini:hover, .btn-mini:focus {
+    opacity: 0.8;
 }
 
 /* loading */
@@ -142,4 +158,5 @@ input[type='checkbox'] {
     border-radius: 5px;
     background: url(../../image/icon/loading.gif) no-repeat;
 }
+
 /* ---------- 全局通用样式 End ---------- */
