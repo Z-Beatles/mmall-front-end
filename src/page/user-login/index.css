@@ -17,7 +17,7 @@
     padding: 10px 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: #666666;
 }
@@ -76,7 +76,7 @@
 
 .register-con .btn-login {
     width: 100%;
-    padding: 3px 0;
+    padding: 2px 0;
     text-align: center;
     font-size: 18px;
 }
@@ -89,20 +89,3 @@
 .register-con .link {
     margin-left: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

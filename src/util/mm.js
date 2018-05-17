@@ -5,7 +5,7 @@ var conf = {
 var _mm = {
     // 网络请求
     request: function (param) {
-        var _this = this;
+        // var _this = this;
         $.ajax({
             type: param.method || 'GET',
             url: param.url || '',
@@ -14,9 +14,9 @@ var _mm = {
             success: function (res) {
                 if (0 === res.code) { // 请求成功
                     typeof param.success === 'function' && param.success(res.data, res.msg);
-                } else if (1000 === res.code) { // 尚未登录，强制跳转到登录界面
+                }/* else if (1000 === res.code) { // 尚未登录，强制跳转到登录界面
                     _this.doLogin();
-                } else { // 其他全为错误码
+                } */else { // 其他全为错误码
                     typeof param.error === 'function' && param.error(res.msg);
                 }
             },
@@ -57,7 +57,7 @@ var _mm = {
             return !!trimValue;
         }
         // 手机号验证
-        if ('phone' === type) {
+        if ('mobile' === type) {
             return /^1\d{10}$/.test(trimValue);
             // return /^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$/.test(value);
         }

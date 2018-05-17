@@ -17,18 +17,19 @@
     padding: 10px 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: #666666;
 }
 
 /* 注册参数框 */
 .register-con .register-box {
-    padding: 20px;
+    padding: 25px 20px 15px 20px;
 }
 
 /* 错误提示框 */
 .register-con .error-item {
+    display: none;
     position: relative;
     margin-bottom: 10px;
     padding: 4px 0 4px 40px;
@@ -73,9 +74,19 @@
     outline: none;
 }
 
-.register-con .btn-login {
+.register-con .register-require {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: text;
+}
+
+.register-con .btn-submit {
     width: 100%;
-    padding: 3px 0;
+    padding: 2px 0;
     text-align: center;
     font-size: 18px;
 }
@@ -88,20 +99,3 @@
 .register-con .link {
     margin-left: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

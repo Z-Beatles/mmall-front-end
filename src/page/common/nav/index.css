@@ -1,21 +1,23 @@
+/* 左边导航 */
 .nav {
     background: #eeeeee;
     height: 30px;
     line-height: 30px;
 }
 
-.nav .user-info {
+.nav .nav-user {
     float: left;
 }
 
-.nav .user-info .login {
+.nav .nav-user .login {
     display: none;
 }
 
-.nav .user-info .link, .link-text {
-    margin-right: 5px;
+.nav .nav-user .link, .link-text {
+    margin-right: 10px;
 }
 
+/* 右边导航 */
 .nav .nav-list {
     float: right;
 }

@@ -12,42 +12,56 @@
         <div class="register-box">
             <div class="error-item">
                 <i class="fa fa-minus-circle error-icon"></i>
-                <p class="err-msg">用户名已被注册</p>
+                <p class="err-msg">Error</p>
             </div>
             <div class="register-item">
                 <label class="register-label" for="username">
                     <i class="fa fa-user"></i>
                 </label>
                 <input id="username" class="register-input" type="text" placeholder="请输入用户名">
+                <span class="register-require un-select">*</span>
             </div>
             <div class="register-item">
                 <label class="register-label" for="password">
-                    <i class="fa fa-lock"></i>
+                    <i class="fa fa-unlock-alt"></i>
                 </label>
-                <input id="password" class="register-input" type="text" placeholder="请输入密码">
+                <input id="password" class="register-input" type="password" placeholder="请输入密码">
+                <span class="register-require un-select">*</span>
             </div>
             <div class="register-item">
-                <label class="register-label" for="repassword">
-                    <i class="fa fa-user"></i>
+                <label class="register-label" for="password-confirm">
+                    <i class="fa fa-lock"></i>
                 </label>
-                <input id="repassword" class="register-input" type="text" placeholder="请确认密码">
+                <input id="password-confirm" class="register-input" type="password" placeholder="请确认密码">
+                <span class="register-require un-select">*</span>
             </div>
             <div class="register-item">
                 <label class="register-label" for="mobile">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-phone"></i>
                 </label>
-                <input id="mobile" class="register-input" type="text" placeholder="请输入联系电话">
+                <input id="mobile" class="register-input" type="text" placeholder="请输入联系电话（选填项）">
             </div>
             <div class="register-item">
                 <label class="register-label" for="email">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-envelope"></i>
                 </label>
-                <input id="email" class="register-input" type="text" placeholder="请输入联系邮箱">
+                <input id="email" class="register-input" type="text" placeholder="请输入邮箱地址（选填项）">
             </div>
-            <a href="" class="btn btn-login">登录</a>
+            <div class="register-item">
+                <label class="register-label" for="question">
+                    <i class="fa fa-question"></i>
+                </label>
+                <input id="question" class="register-input" type="text" placeholder="请输入密码提示问题（选填项）">
+            </div>
+            <div class="register-item">
+                <label class="register-label" for="answer">
+                    <i class="fa fa-key"></i>
+                </label>
+                <input id="answer" class="register-input" type="text" placeholder="请输入密码提示问题答案（选填项）">
+            </div>
+            <a id="submit" class="btn btn-submit">立即注册</a>
             <div class="link-item">
-                <a href="./user-pass-reset.html" class="link" target="_blank">忘记密码</a>
-                <a href="./user-register.html" class="link" target="_blank">立即注册</a>
+                <a href="./user-login.html" class="link">已有账号，去登陆 >></a>
             </div>
         </div>
     </div>

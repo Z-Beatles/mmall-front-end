@@ -25,6 +25,7 @@ var config = {
         'common': ['./src/page/common/index.js', 'webpack-dev-server/client?http://localhost:8088/'],
         'index': './src/page/index/index.js',
         'user-login': './src/page/user-login/index.js',
+        'user-register': './src/page/user-register/index.js',
         'result': './src/page/result/index.js',
     },
     output: {
@@ -64,12 +65,11 @@ var config = {
             image: __dirname + '/src/image',
             page: __dirname + '/src/page',
             service: __dirname + '/src/service',
-            util: __dirname + '/src/util',
-            view: __dirname + '/src/view'
+            util: __dirname + '/src/util'
         }
     },
     devServer: {
-        // 配置devServer跨域代理
+        // 配置devServer开发时期的跨域代理
         proxy: {
             '/v1': {
                 target: 'http://localhost:8080',
@@ -89,6 +89,7 @@ var config = {
         // html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     ]
 };
