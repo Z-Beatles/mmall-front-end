@@ -110,9 +110,6 @@ input[type='checkbox'] {
 
 /* 无法选中 */
 .un-select {
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -133,7 +130,7 @@ input[type='checkbox'] {
     text-decoration: none;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover {
     opacity: 0.8;
 }
 
@@ -144,7 +141,7 @@ input[type='checkbox'] {
     padding: 0 10px;
 }
 
-.btn-mini:hover, .btn-mini:focus {
+.btn-mini:hover {
     opacity: 0.8;
 }
 

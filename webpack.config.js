@@ -26,6 +26,7 @@ var config = {
         'index': './src/page/index/index.js',
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js',
+        'user-passwd-reset': './src/page/user-passwd-reset/index.js',
         'result': './src/page/result/index.js',
     },
     output: {
@@ -69,7 +70,7 @@ var config = {
         }
     },
     devServer: {
-        // 配置devServer开发时期的跨域代理
+        // 配置devServer跨域代理
         proxy: {
             '/v1': {
                 target: 'http://localhost:8080',
@@ -90,6 +91,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-passwd-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     ]
 };

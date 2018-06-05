@@ -24,7 +24,7 @@ var loginPage = {
             _this.submit();
         });
         // 如果按下回车，也提交表单
-        $('.register-input').keyup(function (e) {
+        $('.user-input').keyup(function (e) {
             if (e.keyCode === 13) {
                 _this.submit();
             }
@@ -33,7 +33,7 @@ var loginPage = {
     // 提交表单
     submit: function () {
         var formData = {
-            account: $.trim($('#username').val()),
+            username: $.trim($('#username').val()),
             password: $.trim($('#password').val())
         };
         var validateResult = this.formValidate(formData);
@@ -54,7 +54,7 @@ var loginPage = {
             status: false,
             msg: ''
         };
-        if (!_mm.validata(formData.account, 'require')) {
+        if (!_mm.validata(formData.username, 'require')) {
             result.msg = '用户名不能为空';
             return result;
         }

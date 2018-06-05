@@ -1,19 +1,19 @@
 .page-wrap {
     width: 100%;
     padding: 40px 0;
-    background: #e72955;
 }
 
 /* 表单框 */
-.register-con {
+.user-con {
     position: relative;
     margin: 0 auto;
     width: 400px;
     background: #ffffff;
+    box-shadow: 2px 2px 8px #888888;
 }
 
 /* 标题 */
-.register-con .register-title {
+.user-con .user-title {
     padding: 10px 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
@@ -23,12 +23,12 @@
 }
 
 /* 注册参数框 */
-.register-con .register-box {
+.user-con .user-box {
     padding: 25px 20px 15px 20px;
 }
 
 /* 错误提示框 */
-.register-con .error-item {
+.user-con .error-item {
     display: none;
     position: relative;
     margin-bottom: 10px;
@@ -38,7 +38,7 @@
     background: #fde9e9;
 }
 
-.register-con .error-icon {
+.user-con .error-item .error-icon {
     position: absolute;
     left: 14px;
     top: 50%;
@@ -46,12 +46,22 @@
     margin-top: -7px;
 }
 
-.register-con .register-item {
+/* 每一步的容器 */
+.user-con .step-con {
+    display: none;
+}
+
+.user-con .user-item-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.user-con .user-item {
     position: relative;
     margin-bottom: 20px;
 }
 
-.register-con .register-label {
+.user-con .user-label {
     position: absolute;
     left: 1px;
     top: 1px;
@@ -64,7 +74,7 @@
     border-right: 1px solid #bdbdbd;
 }
 
-.register-con .register-input {
+.user-con .user-input {
     padding: 10px 0 10px 50px;
     width: 308px;
     height: 18px;
@@ -74,32 +84,22 @@
     outline: none;
 }
 
-.register-con .register-input:hover {
+.user-con .user-input:hover {
     border: 1px solid #5cb85c;
 }
 
-.register-con .register-require {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    color: red;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: text;
-}
-
-.register-con .btn-submit {
+.user-con .btn-login {
     width: 100%;
     padding: 2px 0;
     text-align: center;
     font-size: 18px;
 }
 
-.register-con .link-item {
+.user-con .link-item {
     text-align: right;
     margin-top: 10px;
 }
 
-.register-con .link {
+.user-con .link {
     margin-left: 10px;
 }

@@ -7,28 +7,28 @@
 <body>
 <%= require('html-loader!./layout/nav-simple.html') %>
 <div class="page-wrap">
-    <div class="register-con w">
-        <div class="register-title">用户登录</div>
-        <div class="register-box">
+    <div class="user-con w">
+        <div class="user-title">用户登录</div>
+        <div class="user-box">
             <div class="error-item">
                 <i class="fa fa-minus-circle error-icon"></i>
                 <p class="err-msg">Error</p>
             </div>
-            <div class="register-item">
-                <label class="register-label" for="username">
+            <div class="user-item">
+                <label class="user-label" for="username">
                     <i class="fa fa-user"></i>
                 </label>
-                <input id="username" class="register-input" type="text" placeholder="请输入用户名">
+                <input id="username" class="user-input" type="text" placeholder="请输入用户名">
             </div>
-            <div class="register-item">
-                <label class="register-label" for="password">
+            <div class="user-item">
+                <label class="user-label" for="password">
                     <i class="fa fa-lock"></i>
                 </label>
-                <input id="password" class="register-input" type="password" placeholder="请输入密码">
+                <input id="password" class="user-input" type="password" placeholder="请输入密码">
             </div>
             <a id="submit" class="btn btn-login un-select">登录</a>
             <div class="link-item">
-                <a href="./user-pass-reset.html" class="link">忘记密码</a>
+                <a href="./user-passwd-reset.html" class="link">忘记密码</a>
                 <a href="./user-register.html" class="link">立即注册</a>
             </div>
         </div>

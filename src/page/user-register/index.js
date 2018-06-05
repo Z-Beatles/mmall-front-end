@@ -13,8 +13,7 @@ var formError = {
     }
 };
 
-//
-var registerPage = {
+var page = {
     init: function () {
         this.bindEvent();
     },
@@ -26,8 +25,7 @@ var registerPage = {
             // 用户名为空则返回，不进行异步校验
             if (!username) return;
             // 异步检查用户名是否合法
-            var checkParam = {'username': username};
-            checkParam.type = 'username';
+            var checkParam = {'param': username, 'type': 'username'};
             _user.checkRegisterParam(checkParam,
                 function () {
                     formError.hide();
@@ -120,5 +118,5 @@ var registerPage = {
 };
 
 $(function () {
-    registerPage.init();
+    page.init();
 });
