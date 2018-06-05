@@ -1,0 +1,26 @@
+/**
+ * @author waynechu1996@gmail.com
+ * Created 2018-06-05 20:42
+ */
+/* 面包屑导航 */
+.crumb {
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #c60023;
+}
+
+.form-line {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.form-line .label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}

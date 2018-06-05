@@ -13,7 +13,7 @@ var formError = {
     }
 };
 
-var loginPage = {
+var page = {
     init: function () {
         this.bindEvent();
     },
@@ -39,7 +39,7 @@ var loginPage = {
         var validateResult = this.formValidate(formData);
         // 验证成功，提交登录表单
         if (validateResult.status) {
-            _user.login(formData, function (res) {
+            _user.login(formData, function () {
                 window.location.href = _mm.getUrlParam('redirect') || './index.html'
             }, function (errMsg) {
                 formError.show(errMsg);
@@ -70,5 +70,5 @@ var loginPage = {
 };
 
 $(function () {
-    loginPage.init();
+    page.init();
 });

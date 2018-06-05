@@ -31,10 +31,19 @@ var _user = {
             error: reject
         });
     },
-    // 获取当前用户信息
-    getCurrUserInfo: function (resolve, reject) {
+    // 获取用户信息
+    getUserInfo: function (resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/v1/user/get_user_info.do'),
+            method: 'GET',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 获取当前用户信息，并强制登录
+    getCurrUserInfo: function (resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/v1/user/get_curr_user_info.do'),
             method: 'GET',
             success: resolve,
             error: reject
@@ -81,6 +90,7 @@ var _user = {
             error: reject
         });
     }
+
 };
 
 module.exports = _user;
