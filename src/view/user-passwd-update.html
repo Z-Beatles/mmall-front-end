@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title><%= htmlWebpackPlugin.options.title %> - MMall电商平台</title>
+    <%= require('html-loader!./layout/head-common.html') %>
 </head>
 <body>
-
+<%= require('html-loader!./layout/nav.html') %>
+<%= require('html-loader!./layout/header.html') %>
+<div class="crumb">
+    <div class="w">
+        <div class="crumb-con">
+            <a href="./index.html" class="link">MMall</a>
+            <span>›</span>
+            <span class="link-text"><%= htmlWebpackPlugin.options.title %></span>
+        </div>
+    </div>
+</div>
+<div class="page-wrap w">
+    <%= require('html-loader!./layout/nav-side.html') %>
+    <div class="content with-nav">
+        <div class="panel">
+            <div class="panel-title"><%= htmlWebpackPlugin.options.title %></div>
+            <div class="panel-body">
+                <div class="user-info">
+                    <div class="form-line">
+                        <label for="passwordOld">
+                            <span class="label">旧密码：</span>
+                        </label>
+                        <input id="passwordOld" class="input" type="password" autocomplete="off" placeholder="请输入原始密码">
+                    </div>
+                    <div class="form-line">
+                        <label for="passwordNew">
+                            <span class="label">新密码：</span>
+                        </label>
+                        <input id="passwordNew" class="input" type="password" autocomplete="off" placeholder="请输入新密码">
+                    </div>
+                    <div class="form-line">
+                        <label for="passwordNew">
+                            <span class="label">确认密码：</span>
+                        </label>
+                        <input id="passwordConfirm" class="input" type="password" autocomplete="off" placeholder="确认新密码">
+                    </div>
+                    <span class="btn btn-submit-password">提交</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>

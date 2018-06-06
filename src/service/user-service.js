@@ -11,7 +11,7 @@ var _user = {
             error: reject
         });
     },
-    // 检查注册信息是否合法（包括用户名username、电话mobile、邮箱email的校验）
+    // 检查注册信息是否合法（包括用户名username、密码password、邮箱email、电话phone等注册参数）
     checkRegisterParam: function (param, resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/v1/user/check_valid.do'),
@@ -94,6 +94,16 @@ var _user = {
     updateUserInfo: function (params, resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/v1/user/update_user_info.do'),
+            data: params,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 登录状态下更新密码
+    updatePassword: function (params, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/v1/user/update_password.do'),
             data: params,
             method: 'POST',
             success: resolve,

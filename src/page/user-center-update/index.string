@@ -4,20 +4,28 @@
         <span class="text">{{username}}</span>
     </div>
     <div class="form-line">
-        <span class="label">联系电话：</span>
-        <input id="phone" class="input" value="{{phone}}" autocomplete="off"></input>
+        <label for="phone">
+            <span class="label">联系电话：</span>
+        </label>
+        <input id="phone" class="input" value="{{phone}}" autocomplete="off">
     </div>
     <div class="form-line">
-        <span class="label">绑定邮箱：</span>
-        <input id="email" class="input" value="{{email}}" autocomplete="off"></input>
+        <label for="email">
+            <span class="label">绑定邮箱：</span>
+        </label>
+        <input id="email" class="input" value="{{email}}" autocomplete="off">
     </div>
     <div class="form-line">
-        <span class="label">密保问题：</span>
-        <input id="question" class="input" value="{{question}}" autocomplete="off"></input>
+        <label for="question">
+            <span class="label">密保问题：</span>
+        </label>
+        <input id="question" class="input" value="{{question}}" autocomplete="off">
     </div>
     <div class="form-line">
-        <span class="label">密保答案：</span>
-        <input id="answer" class="input" value="{{answer}}" autocomplete="off"></input>
+        <label for="answer">
+            <span class="label">密保答案：</span>
+        </label>
+        <input id="answer" class="input" value="{{answer}}" autocomplete="off">
     </div>
     <span class="btn btn-submit">保存</span>
 </div>

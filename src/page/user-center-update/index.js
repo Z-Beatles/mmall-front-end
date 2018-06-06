@@ -65,7 +65,6 @@ var page = {
             msg: ''
         };
         // 如果填写了电话则对电话号码进行验证
-        console.log(formData.mobile);
         if (formData.mobile && !_mm.validata(formData.mobile, 'mobile')) {
             result.msg = '手机号码格式不正确';
             return result;
