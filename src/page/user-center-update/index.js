@@ -27,6 +27,7 @@ var page = {
     },
     bindEvent: function () {
         var _this = this;
+        // 这里使用事件委托的方式来绑定点击事件，防止页面加载时目标元素不存在而绑定失败
         $(document).on('click', '.btn-submit', function () {
             var userInfo = {
                     phone: $.trim($('#phone').val()),

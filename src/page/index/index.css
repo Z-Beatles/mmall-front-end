@@ -1,2 +1,112 @@
-body {
- }
+/**
+ * @author waynechu1996@gmail.com
+ * Created 2018-06-06 21:41
+ */
+/* 关键字导航 */
+.keywords-list {
+    float: left;
+    padding: 10px 0;
+    margin-right: 10px;
+    width: 240px;
+    height: 350px;
+    background: #666;
+}
+
+.keywords-list .keywords-item {
+    padding-left: 12px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.keywords-list .keywords-item:hover {
+    background: #999;
+}
+
+.keywords-list .keywords-item .link {
+    padding-right: 3px;
+    color: #fff;
+}
+
+.keywords-list .keywords-item .link:hover {
+    color: #c60023;
+}
+
+/* 轮播图 */
+.banner-container {
+    display: flex;
+    float: left;
+    width: 830px;
+    height: 370px;
+    background: #eee;
+}
+
+.banner-container .loading {
+    margin: auto;
+}
+
+/* 商品楼层 */
+.floor-wrap .floor-title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #d58717;
+    border-bottom: 1px solid #d58717;
+}
+
+.floor-wrap:nth-child(2) .floor-title {
+    color: #3b838c;
+    border-bottom: 1px solid #3b838c;
+}
+
+.floor-wrap:nth-child(3) .floor-title {
+    color: #a93931;
+    border-bottom: 1px solid #a93931;
+}
+
+.floor-wrap:nth-child(4) .floor-title {
+    color: #488bad;
+    border-bottom: 1px solid #488bad;
+}
+
+.floor-wrap:nth-child(5) .floor-title {
+    color: #642663;
+    border-bottom: 1px solid #642663;
+}
+
+.floor-wrap .floor-list {
+    overflow: hidden;
+}
+
+.floor-wrap .floor-list .floor-item {
+    position: relative;
+    float: left;
+    margin: 15px 20px 15px 0;
+    width: 200px;
+    height: 220px;
+    background: #fff;
+    transition: box-shadow .5s ease;
+}
+
+.floor-wrap .floor-list .floor-item:hover {
+    box-shadow: 1px 3px 7px #ddd;
+}
+
+.floor-wrap .floor-list .floor-item:last-child {
+    margin: 15px 0 15px 0;
+}
+
+.floor-wrap .floor-list .floor-item .floor-text {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 16px;
+    color: #5e5e5e;
+}
+
+.floor-wrap .floor-list .floor-item .floor-image {
+    padding: 45px 25px 10px 25px;
+    width: 75%;
+    height: 75%;
+    border: none;
+}
