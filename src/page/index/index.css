@@ -85,7 +85,7 @@
     width: 200px;
     height: 220px;
     background: #fff;
-    transition: box-shadow .5s ease;
+    transition: box-shadow .3s;
 }
 
 .floor-wrap .floor-list .floor-item:hover {
@@ -109,4 +109,9 @@
     width: 75%;
     height: 75%;
     border: none;
+    transition: all .5s;
+}
+
+.floor-wrap .floor-list .floor-item .floor-image:hover {
+    transform: scale(1.03);
 }
