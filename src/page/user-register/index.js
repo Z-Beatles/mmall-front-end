@@ -20,12 +20,61 @@ var page = {
     bindEvent: function () {
         var _this = this;
 
+        // 异步检查用户名是否合法
         $('#username').blur(function () {
             var username = $.trim($(this).val());
             // 用户名为空则返回，不进行异步校验
             if (!username) return;
-            // 异步检查用户名是否合法
             var checkParam = {'param': username, 'type': 'username'};
+            _user.checkRegisterParam(checkParam,
+                function () {
+                    formError.hide();
+                },
+                function (errMsg) {
+                    formError.show(errMsg);
+                });
+        });
+        // 异步检查密码是否合法
+        $('#password').blur(function () {
+            var password = $.trim($(this).val());
+            if (!password) return;
+            var checkParam = {'param': password, 'type': 'password'};
+            _user.checkRegisterParam(checkParam,
+                function () {
+                    formError.hide();
+                },
+                function (errMsg) {
+                    formError.show(errMsg);
+                });
+        });
+        // 密码确认
+        $('#password-confirm').blur(function () {
+            var password = $.trim($('#password').val());
+            var passwordConfirm = $.trim($(this).val());
+            if (passwordConfirm !== password) {
+                formError.show("两次输入的密码不一致");
+            } else {
+                formError.hide();
+            }
+        });
+        // 异步检查电话是否合法
+        $('#phone').blur(function () {
+            var phone = $.trim($(this).val());
+            if (!phone) return;
+            var checkParam = {'param': phone, 'type': 'phone'};
+            _user.checkRegisterParam(checkParam,
+                function () {
+                    formError.hide();
+                },
+                function (errMsg) {
+                    formError.show(errMsg);
+                });
+        });
+        // 异步检查邮箱是否合法
+        $('#email').blur(function () {
+            var email = $.trim($(this).val());
+            if (!email) return;
+            var checkParam = {'param': email, 'type': 'email'};
             _user.checkRegisterParam(checkParam,
                 function () {
                     formError.hide();
@@ -68,7 +117,7 @@ var page = {
             formError.show(validateResult.msg);
         }
     },
-    // 表单验证
+    // 提交时的整体表单验证
     formValidate: function (formData) {
         var result = {
             status: false,

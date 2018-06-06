@@ -89,8 +89,17 @@ var _user = {
             success: resolve,
             error: reject
         });
+    },
+    // 登录状态下更新个人信息
+    updateUserInfo: function (params, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/v1/user/update_user_info.do'),
+            data: params,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
     }
-
 };
 
 module.exports = _user;
