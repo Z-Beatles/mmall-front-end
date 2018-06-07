@@ -1,0 +1,114 @@
+/**
+ * @author waynechu1996@gmail.com
+ * Created 2018-06-07 16:05
+ */
+/* 排序按钮 */
+.sort-con {
+    overflow: hidden;
+}
+
+.sort-con .sort-item {
+    position: relative;
+    float: left;
+    display: inline-block;
+    padding: 0 8px;
+    height: 23px;
+    line-height: 23px;
+    border: 1px solid #ccc;
+    margin-right: -1px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.sort-con .sort-item:hover {
+    border: 1px solid #c60023;
+    color: #c60023;
+    box-shadow: 3px 3px 7px #ddd;
+}
+
+.sort-con .sort-item.active {
+    background: #c60023;
+    border: 1px solid #c60023;
+    color: #fff;
+    box-shadow: 3px 3px 7px #ddd;
+}
+
+.sort-con .sort-item .fa-sort-desc {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+}
+
+.sort-con .sort-item.asc .fa-sort-desc {
+    opacity: .6;
+}
+
+.sort-con .sort-item.desc .fa-sort-asc {
+    opacity: .6;
+}
+
+/* 商品列表 */
+.p-list-con {
+    margin-top: 15px;
+    margin-right: -20px;
+    overflow: auto ;
+}
+
+.p-list-con .p-item {
+    float: left;
+    width: 180px;
+    padding: 10px;
+    margin: 0 19px 20px 0;
+    background: #fff;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.p-list-con .p-item:hover {
+    box-shadow: 3px 3px 7px #ddd;
+}
+
+.p-list-con .p-item a {
+    text-decoration: none;
+}
+
+.p-list-con .p-item .p-img-con {
+    display: flex;
+    width: 180px;
+    height: 200px;
+}
+
+.p-list-con .p-item .p-img-con .p-img {
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    transition: all .5s;
+}
+
+.p-list-con .p-item .p-img-con .p-img:hover {
+    transform: scale(1.03);
+}
+
+.p-list-con .p-item .p-price-con {
+    height: 30px;
+    line-height: 30px;
+}
+
+.p-list-con .p-item .p-price-con .p-price {
+    font-size: 16px;
+    color: #e7380d;
+}
+
+.p-list-con .p-item .p-name-con {
+    height: 40px;
+    overflow: hidden;
+}
+
+.p-list-con .p-item .p-name-con .p-name {
+    height: 40px;
+    line-height: 20px;
+    color: #666;
+}
+
