@@ -1,0 +1,38 @@
+/**
+ * @author waynechu1996@gmail.com
+ * Created 2018-06-08 22:45
+ */
+.pg-list-con {
+    margin: 10px auto;
+    text-align: center;
+    color: #333;
+}
+
+.pg-list-con .pg-item {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: #eee;
+    cursor: pointer;
+}
+
+.pg-list-con .pg-item.disabled {
+    color: #ccc;
+    background: none;
+    cursor: not-allowed;
+}
+
+.pg-list-con .pg-item.active {
+    border: 1px solid #f6f6f6;
+    background: none;
+    cursor: not-allowed;
+}
+
+.pg-list-con .pg-total {
+    display: inline-block;
+    margin-left: 10px;
+}

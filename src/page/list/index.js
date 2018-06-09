@@ -9,6 +9,7 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
+var Pagination = require('util/pagination/index.js');
 var templateIndex = require('./index.string');
 
 var page = {
@@ -65,8 +66,8 @@ var page = {
         var _this = this,
             listHtml = '',
             requestParam = this.data.listParam,
-            $pListCon = $('.p-con');
-        $pListCon.html('<div class="loading"></div>');
+            $pListCon = $('.prod-con');
+        //$pListCon.html('<div class="loading"></div>');
         // 删除参数中不必要的请求参数
         requestParam.categoryId ? (delete requestParam.keyword) : (delete requestParam.categoryId);
         // 发起请求
@@ -75,14 +76,32 @@ var page = {
                 list: res.list
             });
             $pListCon.html(listHtml);
-            _this.loadPagination(res.pageNum, res.pages);
+            _this.loadPagination({
+                hasPreviousPage: res.hasPreviousPage,
+                prePage: res.prePage,
+                hasNextPage: res.hasNextPage,
+                nextPage: res.nextPage,
+                pageNum: res.pageNum,
+                pages: res.pages
+            });
         }, function (errMsg) {
             _mm.errorTips(errMsg);
         });
     },
     // 加载分页信息
-    loadPagination: function (pageNum, pages) {
-
+    loadPagination: function (pageInfo) {
+        var _this = this;
+        if (!this.pagination) {
+            this.pagination = new Pagination();
+        }
+        this.pagination.render($.extend({}, pageInfo, {
+            container: $('.pg-con'),
+            // 点击按钮的回调事件
+            onSelectPage: function (pageNum) {
+                _this.data.listParam.pageNum = pageNum;
+                _this.loadList();
+            }
+        }));
     }
 };
 

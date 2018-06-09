@@ -22,7 +22,7 @@ var getHtmlConfig = function (name, title) {
 // webpack config
 var config = {
     entry: {
-        'common': ['./src/page/common/index.js', 'webpack-dev-server/client?http://localhost:8088/'],
+        'common': ['./src/page/common/index.js', 'webpack-dev-server/client?http://localhost:9090/'],
         'index': './src/page/index/index.js',
         'list': './src/page/list/index.js',
         'user-login': './src/page/user-login/index.js',
@@ -105,7 +105,7 @@ var config = {
 };
 
 if ('dev' === WEBPACK_ENV) {
-    config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
+    config.entry.common.push('webpack-dev-server/client?http://localhost:9090/');
 }
 
 module.exports = config;

@@ -17,16 +17,20 @@
 
 .header .search-form .search-input {
     width: 550px;
+    height: 40px;
     padding: 10px;
     border: 2px solid #c60023;
     font-size: 15px;
     outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .header .search-form .search-btn {
     position: absolute;
     width: 80px;
-    height: 41px;
+    height: 40px;
     border: none;
     background: #c60023;
     font-size: 17px;

@@ -150,6 +150,9 @@ input[type='checkbox'] {
 
 /* 无法选中 */
 .un-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
