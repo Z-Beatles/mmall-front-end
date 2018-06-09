@@ -22,7 +22,7 @@ var getHtmlConfig = function (name, title) {
 // webpack config
 var config = {
     entry: {
-        'common': ['./src/page/common/index.js', 'webpack-dev-server/client?http://localhost:9090/'],
+        'common': './src/page/common/index.js',
         'index': './src/page/index/index.js',
         'list': './src/page/list/index.js',
         'user-login': './src/page/user-login/index.js',
