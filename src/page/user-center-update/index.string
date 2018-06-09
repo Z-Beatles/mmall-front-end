@@ -7,25 +7,25 @@
         <label for="phone">
             <span class="label">联系电话：</span>
         </label>
-        <input id="phone" class="input" value="{{phone}}" autocomplete="off">
+        <input id="phone" class="input" value="{{phone}}">
     </div>
     <div class="form-line">
         <label for="email">
             <span class="label">绑定邮箱：</span>
         </label>
-        <input id="email" class="input" value="{{email}}" autocomplete="off">
+        <input id="email" class="input" value="{{email}}">
     </div>
     <div class="form-line">
         <label for="question">
             <span class="label">密保问题：</span>
         </label>
-        <input id="question" class="input" value="{{question}}" autocomplete="off">
+        <input id="question" class="input" value="{{question}}">
     </div>
     <div class="form-line">
         <label for="answer">
             <span class="label">密保答案：</span>
         </label>
-        <input id="answer" class="input" value="{{answer}}" autocomplete="off">
+        <input id="answer" class="input" value="{{answer}}">
     </div>
     <span class="btn btn-submit">保存</span>
 </div>
